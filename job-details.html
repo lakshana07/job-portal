@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar sticky">
+    <div class="logo">JobHunt</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="login.html">Login/Register</a>
+    </nav>
+  </header>
+
+  <section class="job-details">
+    <h2>Senior Web Developer</h2>
+    <p><strong>Location:</strong> Mumbai</p>
+    <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    
+    <form id="resumeForm">
+      <label>Full Name: <input type="text" required></label>
+      <label>Email: <input type="email" required></label>
+      <label>Resume: <input type="file" accept=".pdf,.doc,.docx" required></label>
+      <button type="submit">Apply Now</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById("resumeForm").onsubmit = function (e) {
+      e.preventDefault();
+      const file = e.target[2].files[0];
+      if (file.size > 2 * 1024 * 1024) {
+        alert("Resume must be under 2MB");
+      } else {
+        alert("Application submitted successfully!");
+      }
+    }
+  </script>
+</body>
+</html>

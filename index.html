@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Portal - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar sticky">
+    <div class="logo">JobHunt</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="login.html">Login/Register</a>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1>Find Your Dream Job</h1>
+    <p>Search jobs by category or location</p>
+  </section>
+
+  <section class="categories">
+  <h2>Job Categories</h2>
+  <div class="category-list">
+    <button onclick="goToCategory('IT')">IT</button>
+    <button onclick="goToCategory('Marketing')">Marketing</button>
+    <button onclick="goToCategory('Finance')">Finance</button>
+    <button onclick="goToCategory('HR')">HR</button>
+  </div>
+</section>
+
+<script>
+  function goToCategory(category) {
+    window.location.href = `jobs.html?category=${category}`;
+  }
+</script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
